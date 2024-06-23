@@ -19,7 +19,7 @@ The backend services manage the user's list, including adding, removing, and lis
 
 ### Prerequisites
 - Java 8
-- Maven
+- Maven 3.8.6
 - Docker (for running MongoDB)
 
 ### Running MongoDB
@@ -42,6 +42,40 @@ The backend services manage the user's list, including adding, removing, and lis
 ### API Endpoints
 API Endpoint can be find here on the below Endpoint
 http://localhost:8011/stageott/swagger-ui.html#/
+
+- **Add Item to My List**: `POST /users/add`
+  - Request Body:
+    ```json
+    {
+	  "id": "user1",
+	  "username": "aman1",
+	  "favoriteGenres": [
+	    "ACTION",
+	    "COMEDY"
+	  ],
+	  "dislikedGenres": [
+	    "HORROR"
+	  ],
+	  "watchHistory": [
+	    {
+	      "contentId": "movie1",
+	      "watchedOn": "2023-06-23T18:25:43.511Z",
+	      "rating": 5
+	    }
+	  ],
+	  "myList": [
+	    {
+	      "itemId": "item1",
+	      "itemType": "Movie"
+	    },
+	    {
+	      "itemId": "item3",
+	      "itemType": "Movie"
+	    }
+	  ]
+	}
+    ```
+
 
 - **Add Item to My List**: `POST /mylist/add-item`
   - Request Body:
@@ -70,6 +104,7 @@ http://localhost:8011/stageott/swagger-ui.html#/
      "pageNo": 0,
      "pageSize": 0,
      "userId": "string"
-    }```
+    }
+    ```
 
 
