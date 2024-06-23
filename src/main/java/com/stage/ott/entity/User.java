@@ -10,8 +10,8 @@ public class User {
 	@Id
 	private String id;
 	private String username;
-	private List<String> favoriteGenres;
-	private List<String> dislikedGenres;
+	private List<Genre> favoriteGenres;
+	private List<Genre> dislikedGenres;
 	private List<WatchHistory> watchHistory;
 	private List<Item> myList;
 
@@ -31,19 +31,19 @@ public class User {
 		this.username = username;
 	}
 
-	public List<String> getFavoriteGenres() {
+	public List<Genre> getFavoriteGenres() {
 		return favoriteGenres;
 	}
 
-	public void setFavoriteGenres(List<String> favoriteGenres) {
+	public void setFavoriteGenres(List<Genre> favoriteGenres) {
 		this.favoriteGenres = favoriteGenres;
 	}
 
-	public List<String> getDislikedGenres() {
+	public List<Genre> getDislikedGenres() {
 		return dislikedGenres;
 	}
 
-	public void setDislikedGenres(List<String> dislikedGenres) {
+	public void setDislikedGenres(List<Genre> dislikedGenres) {
 		this.dislikedGenres = dislikedGenres;
 	}
 

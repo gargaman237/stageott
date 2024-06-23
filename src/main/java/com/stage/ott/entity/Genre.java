@@ -6,7 +6,7 @@ import java.util.List;
 
 public enum Genre {
 
-	Action, Comedy, Drama, Fantasy, Horror, Romance, SciFi;
+	ACTION, COMEDY, DRAMA, FANTASY, HORROR, ROMANCE, SCIFI;
 
 	public List<Genre> getEnumGenreValues() {
 		return new ArrayList<Genre>(Arrays.asList(values()));

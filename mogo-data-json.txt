@@ -1,0 +1,20 @@
+db.item.insertMany([
+  {
+    "itemId": "item1",
+    "itemType": "Movie"
+  },
+  {
+    "itemId": "item2",
+    "itemType": "TVShow"
+  },
+  {
+    "itemId": "item3",
+    "itemType": "Movie"
+  }
+]);
+
+
+
+
+
+

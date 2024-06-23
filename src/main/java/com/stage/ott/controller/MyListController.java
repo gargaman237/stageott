@@ -34,12 +34,12 @@ public class MyListController {
 		return "Here is your application working";
 	}
 
-	@PostMapping("/add")
+	@PostMapping("/add-item")
 	public User addItemToMyList(@RequestBody AddItemRequestDto request) {
 		return myListService.addItemToMyList(request.getUserId(), request.getItemId(), request.getItemType());
 	}
 
-	@DeleteMapping("/remove")
+	@DeleteMapping("/remove-item")
 	public User removeItemFromMyList(@RequestBody RemoveItemRequestDto request) {
 		try {
 			return myListService.removeItemFromMyList(request.getUserId(), request.getItemId());
@@ -49,7 +49,7 @@ public class MyListController {
 		return null;
 	}
 
-	@GetMapping("/list")
+	@PostMapping("/list-item")
 	public List<Item> listMyItems(@RequestBody SearchItemDto searchItemDto) {
 		try {
 			return myListService.listMyItems(searchItemDto);

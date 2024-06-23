@@ -22,7 +22,10 @@ public class MyListService {
 	public User addItemToMyList(String userId, String itemId, String itemType) {
 		User user = userRepository.findById(userId).orElse(new User());
 		if (user.getMyList().stream().noneMatch(item -> item.getItemId().equals(itemId))) {
-			user.getMyList().add(new Item(itemId, itemType));
+			Item item = new Item();
+			item.setItemId(itemId);
+			item.setItemType(itemType);
+			user.getMyList().add(item);
 		}
 		return userRepository.save(user);
 	}
