@@ -33,6 +33,7 @@ The backend services manage the user's list, including adding, removing, and lis
     git clone https://github.com/gargaman237/stageott.git
     cd stageott
     ```
+    
 **Build the project**:
     ```sh
     mvn clean install
