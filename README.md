@@ -25,7 +25,9 @@ The backend services manage the user's list, including adding, removing, and lis
 ### Setting Up Spring Boot Project
 
 1. **clone the repo using below command**:
+```sh
 git clone https://github.com/gargaman237/stageott.git
+ ```
 
 ### Running MongoDB
 
