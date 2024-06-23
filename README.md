@@ -27,6 +27,11 @@ The backend services manage the user's list, including adding, removing, and lis
     ```sh
     docker run -d -p 27017:27017 --name mongodb mongo
     ```
+    
+**Create and import the database**:
+     ```sh
+	mongorestore -d stageott ~/<pathToYourDirectory>/stageott/source-db
+    ```
 ### Setting Up the Project
 **clone the repo using below command**:
     ```sh
