@@ -22,17 +22,54 @@ The backend services manage the user's list, including adding, removing, and lis
 - Maven
 - Docker (for running MongoDB)
 
-### Setting Up Spring Boot Project
-
-1. **clone the repo using below command**:
-```sh
-git clone https://github.com/gargaman237/stageott.git
- ```
-
 ### Running MongoDB
-
-2. **Start MongoDB using Docker**:
+**Start MongoDB using Docker**:
     ```sh
     docker run -d -p 27017:27017 --name mongodb mongo
     ```
+### Setting Up the Project
+**clone the repo using below command**:
+    ```sh
+    git clone https://github.com/gargaman237/stageott.git
+    cd stageott
+    ```
+**Build the project**:
+    ```sh
+    mvn clean install
+    mvn spring-boot:run
+    ```
+
+### API Endpoints
+API Endpoint can be find here on the below Endpoint
+http://localhost:8011/stageott/swagger-ui.html#/
+
+- **Add Item to My List**: `POST /mylist/add-item`
+  - Request Body:
+    ```json
+    {
+      "userId": "user1",
+      "itemId": "item1",
+      "itemType": "Movie"
+    }
+    ```
+
+- **Remove Item from My List**: `DELETE /mylist/remove-item`
+  - Request Body:
+    ```json
+    {
+      "userId": "user1",
+      "itemId": "item1"
+    }
+    ```
+
+- **List My Items**: `POST /mylist/list-item`
+  - Request Body:
+    ```json
+    {
+     "itemType": "string",
+     "pageNo": 0,
+     "pageSize": 0,
+     "userId": "string"
+    }```
+
 
