@@ -2,6 +2,9 @@ package com.stage.ott.entity;
 
 import java.util.Date;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "watchHistory")
 public class WatchHistory {
 	private String contentId;
 	private Date watchedOn;

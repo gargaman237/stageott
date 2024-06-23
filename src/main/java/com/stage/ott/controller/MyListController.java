@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.stage.ott.entity.Item;
@@ -20,13 +21,18 @@ import com.stage.ott.requestDto.SearchItemDto;
 import com.stage.ott.service.MyListService;
 
 @RestController
-@RequestMapping("/my-list")
+@RequestMapping("/mylist")
 public class MyListController {
 
 	@Autowired
 	private MyListService myListService;
 
 	private static Logger logger = LoggerFactory.getLogger(MyListController.class.getName());
+	
+	@GetMapping("/test")
+	public String test() {
+		return "Here is your application working";
+	}
 
 	@PostMapping("/add")
 	public User addItemToMyList(@RequestBody AddItemRequestDto request) {
